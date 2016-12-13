@@ -1,0 +1,24 @@
+{
+  "name": "lazyload",
+  "version": "0.1.1",
+  "description": "A image lazy load plugin",
+  "main": "lazyload.es6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cirplan/lazyload.git"
+  },
+  "keywords": [
+    "image",
+    "lazy",
+    "load"
+  ],
+  "author": "dcirplan@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cirplan/lazyload/issues"
+  },
+  "homepage": "https://github.com/cirplan/lazyload#readme"
+}
