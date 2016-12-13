@@ -2,8 +2,8 @@
 
 ### Demo
 
-[demo1](http://jeffdeng.me/lazyload/index1.html)
-[demo2](http://jeffdeng.me/lazyload/index2.html)
+[demo1](http://jeffdeng.me/lazyload/docs/index1.html)
+[demo2](http://jeffdeng.me/lazyload/docs/index2.html)
 
 ## How to use
 
