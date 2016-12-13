@@ -1,5 +1,10 @@
 # A image lazy load plugin. v0.1.1
 
+### Demo
+
+[demo1](http://jeffdeng.me/lazyload/index1.html)
+[demo2](http://jeffdeng.me/lazyload/index2.html)
+
 ## How to use
 
 ```

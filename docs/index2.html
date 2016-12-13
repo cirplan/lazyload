@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lazy load demo1</title>
+    <style>
+        * {
+			margin: 0;
+			padding: 0;
+            background-color: #ccc;
+		}
+        h1 {
+            text-align: center;
+            margin: 10px;
+        }
+
+		.container {
+			margin: 0 auto;
+			width: 430px;
+            height: 800px;
+            overflow: scroll;
+            background-color: #fff;
+		}
+
+		.container img {
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+    </style>
+</head>
+    <body>
+        <h1>container为指定dom元素</h1>
+	<div class="container" id="container">
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=3540475190,4182023430&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=157166210,3193440590&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=3300610518,955391791&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2602218908,3524713324&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=2228020868,2892639853&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=3129596611,656489864&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=45658257,2606094024&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=2698154305,1149526346&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=3637503300,3583392577&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=1162115820,2423378070&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=3012239441,211731873&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2049523582,1920950980&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=4275686312,1709364802&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=761437680,3234186250&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=2529809742,1556457138&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=432653953,796889275&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=510796379,57975989&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=889866306,1486935033&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=493846154,386453636&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=3788464479,993620594&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=885922288,1535439656&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=4151468178,1389253620&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=3765857933,1711933764&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=890529805,2223653134&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=803032420,3211671773&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=4105875548,1017991312&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=4102993886,1659883025&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=3733860343,3621046297&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=484893899,3740619903&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=2675247840,2052534001&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=1864328372,1648589122&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2585327948,1327250274&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=4146805226,3549285181&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=468075703,2867741550&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=346710075,3340524441&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=3794407731,470042094&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=337167739,3803874299&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=863716138,2427839056&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=1776288739,238137176&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=1183449319,2197873426&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=3361720087,3156669404&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=3251773268,2679216511&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=191169681,3540353397&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=808745283,1263277317&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=1519614722,3083281620&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=2908097293,2285688097&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=2706341389,54909419&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=31071926,4157290589&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=4216257977,3967962163&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2352808483,3507951317&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=1228890226,3092124197&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=1361311519,3329752552&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=1050786542,1025360809&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=3164268532,405644851&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=2911558691,2625278891&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=1098741861,1913650322&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=185905459,1423946148&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=1283731816,1441421947&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=4212247720,26574335&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=465168957,1434782433&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=909697817,661589653&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=3445118772,4240950516&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=2103356487,1570472848&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=3269288099,491231292&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=828877865,858397218&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=3539197471,118134241&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=2173940201,2432475221&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=1062656858,2369908950&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=3188355945,785229059&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=950191939,2468428538&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=2896163317,366964491&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=3503463361,3166645364&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=4185979790,2782075402&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=332988718,3870472992&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img4.imgtn.bdimg.com/it/u=1964581835,838570517&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=4043303547,2311966608&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2730319136,2772990460&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=3229172473,1188126912&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=2555261852,3970367245&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=582550642,2238174533&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=2130022333,4058203236&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=3821940603,2255288918&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img3.imgtn.bdimg.com/it/u=3065508168,4008054211&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=2516307059,160555712&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img0.imgtn.bdimg.com/it/u=3074336338,2858103684&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img5.imgtn.bdimg.com/it/u=76082419,591509122&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img1.imgtn.bdimg.com/it/u=2925064530,1498097279&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+        <img class="lazy" data-url="http://img2.imgtn.bdimg.com/it/u=2918033426,4095934726&amp;fm=21&amp;gp=0.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="200" height="200"> 
+    </div>
+    <script src="../lazyload.js"></script>
+	<script>
+        LazyLoad({
+            container: document.getElementById('container')
+        })
+    </script>
+</body>
+</html>

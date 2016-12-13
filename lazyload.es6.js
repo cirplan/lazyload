@@ -1,5 +1,7 @@
-// Image lazy load plugin
-// created at 2016-12-10 by dcirplan@gmail.com
+/** Image lazy load plugin v0.1.1
+ *  created at 2016-12-10 by dcirplan@gmail.com
+ *  Released under the MIT License.
+ */
 
 /*
 *  option {object}
