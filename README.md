@@ -1,4 +1,4 @@
-# A image lazy load plugin. v0.1.1
+# A image lazy load plugin. v0.1.2
 
 ### Demo
 

@@ -1,4 +1,4 @@
-/** Image lazy load plugin v0.1.1
+/** Image lazy load plugin v0.1.2
  *  created at 2016-12-10 by dcirplan@gmail.com
  *  Released under the MIT License.
  */
@@ -31,8 +31,11 @@
             class: '.lazy',
             async: false
         }
-
-        ;(new LazyLoad(Object.assign(_option, option))).init()
+        try {
+            ;(new LazyLoad(Object.assign(_option, option))).init()
+        } catch (e) {
+            alert(e.stack)
+        }
     }
 
     function LazyLoad (option) {
@@ -40,6 +43,7 @@
         this.list = []
         this.listenHandle = null
         this.insertHandle = null
+        this.evens = ['scroll', 'resize', getWheelEvent()]
     }
 
     LazyLoad.prototype = {
@@ -48,7 +52,7 @@
         init: function () {
             this._scan()
             this.listenHandle = this._listen()
-            this.listenHandle()
+            setTimeout(this.listenHandle, 300)
             this._on()
         },
 
@@ -57,16 +61,16 @@
             var list = document.querySelectorAll(selector),
                 imgCache = []
 
-            list.forEach((item) => {
-                imgCache.push(item)
-            })
+            for (var i = 0; i < list.length; i++) {
+                imgCache.push(list[i])
+            }
 
             this.list = imgCache
         },
 
         _listen: function () {
             var self = this
-            return throttle(() => {
+            return throttle(function () {
                 self._update()
                 if (!self.option.async && !self.list.length) {
                     self._off()
@@ -130,12 +134,16 @@
         },
 
         _on: function () {
-            this.option.container.addEventListener('scroll', this.listenHandle)
+            for (var i = 0; i < this.evens.length; i++) {
+                this.option.container.addEventListener(this.evens[i], this.listenHandle)
+            }
             this.option.async && this._async()
         },
 
         _off () {
-            this.option.container.removeEventListener('scroll', this.listenHandle)
+             for (var i = 0; i < this.evens.length; i++) {
+                this.option.container.removeEventListener(this.evens[i], this.listenHandle)
+            }
         }
     }
 
@@ -143,7 +151,7 @@
         var handle = null,
             lastRun = 0
 
-        return () => {
+        return function () {
             if (handle) return
             var time = Date.now() - lastRun,
                 context = this,
@@ -164,6 +172,10 @@
 
     function isWindow (obj) {
         return obj != null && obj == obj.window
+    }
+
+    function getWheelEvent () {
+        return "onwheel" in document.createElement("div") ? "wheel" : "mousewheel" 
     }
 
     return lazyLoadCtrl

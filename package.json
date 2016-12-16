@@ -1,6 +1,6 @@
 {
   "name": "lazyload",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A image lazy load plugin",
   "main": "lazyload.es6.js",
   "scripts": {
